@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.idea",
+    "\\.idea\\inspectionProfiles",
+    "\\src",
+    "\\ui",
+    "\\ui\\__pycache__"
+  ],
+  "SelectedNode": "\\src\\database.py",
+  "PreviewInSolutionExplorer": false
+}

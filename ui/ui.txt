@@ -1,0 +1,3 @@
+cd ui
+pyuic5 system.ui -o system_ui.py
+将bank.ui变成py文件
