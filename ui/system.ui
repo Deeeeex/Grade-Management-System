@@ -213,17 +213,17 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="userLineEdit_2"/>
+       <widget class="QLineEdit" name="idEdit"/>
       </item>
       <item row="4" column="1">
-       <widget class="QLineEdit" name="pwdLineEdit_2">
+       <widget class="QLineEdit" name="passwordEdit">
         <property name="echoMode">
          <enum>QLineEdit::Password</enum>
         </property>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QLineEdit" name="classEdit"/>
       </item>
       <item row="4" column="0">
        <widget class="QLabel" name="password_2">
@@ -250,7 +250,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="nameEdit"/>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_14">
@@ -265,7 +265,7 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QLineEdit" name="lineEdit_3"/>
+       <widget class="QLineEdit" name="regiCodeEdit"/>
       </item>
       <item row="3" column="0">
        <widget class="QLabel" name="label_18">
@@ -281,7 +281,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QPushButton" name="loginBtn_2">
+    <widget class="QPushButton" name="registerBtn">
      <property name="geometry">
       <rect>
        <x>380</x>

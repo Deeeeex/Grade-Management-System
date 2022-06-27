@@ -14,7 +14,7 @@ cur_identity = ''
 
 class System(QMainWindow):
     ui = None
-    db = None
+    db = Database()
     dbName = None
 
     def __init__(self) -> None:
@@ -26,6 +26,7 @@ class System(QMainWindow):
         self.initBtnColor()
 
         self.initHomeBinding()
+        initRegiBinding(self, self.ui, self.db)
         self.setStuBtnEnabled(False)
         self.setTecBtnEnabled(False)
         # self.initPageBinding()  # 不能写在__init__里面，那时候还没有连接数据库
@@ -55,7 +56,6 @@ class System(QMainWindow):
     def initPageBinding(self):
         global cur_identity
         global cur_user
-        initRegiBinding(self, self.ui, self.db)
         initseaBinding(self, self.ui, self.db, cur_user, cur_identity)
         initAnaBinding(self, self.ui, self.db, cur_user, cur_identity)
         initOupBinding(self, self.ui, self.db)
@@ -63,7 +63,6 @@ class System(QMainWindow):
 
     def login(self):
         self.ui.pwdLineEdit.setEchoMode(QLineEdit.Password)
-        self.db = Database()
         username = self.ui.userLineEdit.text()
         password = self.ui.pwdLineEdit.text()
         identity = self.db.execute(
@@ -86,11 +85,6 @@ class System(QMainWindow):
             self.initPageBinding()
 
     def logOut(self):
-        # close db
-        if self.db is not None:
-            self.db.close()
-            self.db = None
-            self.dbName = ""
         # 设置按钮不可点击
         self.setStuBtnEnabled(False)
         self.setTecBtnEnabled(False)
