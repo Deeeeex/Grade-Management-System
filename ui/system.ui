@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>system</class>
- <widget class="QWidget" name="bank">
+ <widget class="QWidget" name="system">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -23,17 +23,22 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="homePage">
     <widget class="QPushButton" name="loginBtn">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>290</x>
        <y>510</y>
-       <width>92</width>
-       <height>28</height>
+       <width>111</width>
+       <height>41</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>登陆</string>
@@ -42,11 +47,16 @@
     <widget class="QPushButton" name="logOutBtn">
      <property name="geometry">
       <rect>
-       <x>450</x>
+       <x>440</x>
        <y>510</y>
-       <width>92</width>
-       <height>28</height>
+       <width>111</width>
+       <height>41</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>退出</string>
@@ -56,9 +66,9 @@
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>300</y>
-       <width>351</width>
-       <height>191</height>
+       <y>280</y>
+       <width>361</width>
+       <height>211</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
@@ -80,9 +90,6 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="userLineEdit"/>
-      </item>
       <item row="1" column="0">
        <widget class="QLabel" name="password">
         <property name="font">
@@ -94,6 +101,9 @@
          <string>密码：</string>
         </property>
        </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="userLineEdit"/>
       </item>
       <item row="1" column="1">
        <widget class="QLineEdit" name="pwdLineEdit">
@@ -107,10 +117,10 @@
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>200</y>
-       <width>251</width>
-       <height>91</height>
+       <x>240</x>
+       <y>150</y>
+       <width>341</width>
+       <height>151</height>
       </rect>
      </property>
      <property name="maximumSize">
@@ -122,7 +132,7 @@
      <property name="font">
       <font>
        <family>华光报宋一_CNKI</family>
-       <pointsize>15</pointsize>
+       <pointsize>18</pointsize>
        <weight>75</weight>
        <italic>false</italic>
        <bold>true</bold>
@@ -698,7 +708,12 @@
      </column>
      <column>
       <property name="text">
-       <string>排名</string>
+       <string>班级排名</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>年级排名</string>
       </property>
      </column>
     </widget>

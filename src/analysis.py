@@ -21,9 +21,16 @@ def initAnaBinding(self, ui, db, cur_user, cur_identity):
 
 
 def total_Ana(self, ui, db, cur_user, cur_identity):
-    plt.clf()
-    data = self.db.execute(
-        "select score.e_id,score.total from xxp.score where s_id=\'" + cur_user + "\';")
+    # 如果是学生展示该学生的平均分
+    if cur_identity == 'student':
+        plt.clf()
+        data = self.db.execute(
+            "select score.e_id,score.total from xxp.score where s_id=\'" + cur_user + "\';")
+    # 如果是老师展示年级平均分
+    elif cur_identity == 'teacher':
+        plt.clf()
+        data = self.db.execute(
+            "select score.e_id,avg(total) from xxp.score group by score.e_id;")
     data_dict = {}
     for i in data:
         data_dict[i[0]] = i[1]
@@ -44,9 +51,16 @@ def total_Ana(self, ui, db, cur_user, cur_identity):
 
 
 def Chinese_Ana(self, ui, db, cur_user, cur_identity):
-    plt.clf()
-    data = self.db.execute(
-        "select score.e_id,score.Chinese from xxp.score where s_id=\'" + cur_user + "\';")
+    # 如果是学生展示该学生的平均分
+    if cur_identity == 'student':
+        plt.clf()
+        data = self.db.execute(
+            "select score.e_id,score.Chinese from xxp.score where s_id=\'" + cur_user + "\';")
+    # 如果是老师展示年级平均分
+    elif cur_identity == 'teacher':
+        plt.clf()
+        data = self.db.execute(
+            "select score.e_id,avg(Chinese) from xxp.score group by score.e_id;")
     data_dict = {}
     for i in data:
         data_dict[i[0]] = i[1]
@@ -65,9 +79,16 @@ def Chinese_Ana(self, ui, db, cur_user, cur_identity):
 
 
 def Math_Ana(self, ui, db, cur_user, cur_identity):
-    plt.clf()
-    data = self.db.execute(
-        "select score.e_id,score.Math from xxp.score where s_id=\'" + cur_user + "\';")
+    # 如果是学生展示该学生的平均分
+    if cur_identity == 'student':
+        plt.clf()
+        data = self.db.execute(
+            "select score.e_id,score.Math from xxp.score where s_id=\'" + cur_user + "\';")
+    # 如果是老师展示年级平均分
+    elif cur_identity == 'teacher':
+        plt.clf()
+        data = self.db.execute(
+            "select score.e_id,avg(Math) from xxp.score group by score.e_id;")
     data_dict = {}
     for i in data:
         data_dict[i[0]] = i[1]
@@ -86,9 +107,16 @@ def Math_Ana(self, ui, db, cur_user, cur_identity):
 
 
 def English_Ana(self, ui, db, cur_user, cur_identity):
-    plt.clf()
-    data = self.db.execute(
-        "select score.e_id,score.English from xxp.score where s_id=\'" + cur_user + "\';")
+    # 如果是学生展示该学生的平均分
+    if cur_identity == 'student':
+        plt.clf()
+        data = self.db.execute(
+            "select score.e_id,score.English from xxp.score where s_id=\'" + cur_user + "\';")
+    # 如果是老师展示年级平均分
+    elif cur_identity == 'teacher':
+        plt.clf()
+        data = self.db.execute(
+            "select score.e_id,avg(English) from xxp.score group by score.e_id;")
     data_dict = {}
     for i in data:
         data_dict[i[0]] = i[1]
